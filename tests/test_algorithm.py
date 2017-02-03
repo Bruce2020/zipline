@@ -3585,13 +3585,19 @@ class TestFuturesAlgo(WithDataPortal, WithSimParams, ZiplineTestCase):
         np.testing.assert_array_equal(
             algo.history_values[0].index,
             pd.date_range(
-                '2016-01-06 11:27', '2016-01-06 11:31', freq='min', tz='UTC',
+                '2016-01-06 6:27',
+                '2016-01-06 6:31',
+                freq='min',
+                tz='US/Eastern',
             ),
         )
         np.testing.assert_array_equal(
             algo.history_values[1].index,
             pd.date_range(
-                '2016-01-07 11:27', '2016-01-07 11:31', freq='min', tz='UTC',
+                '2016-01-07 6:27',
+                '2016-01-07 6:31',
+                freq='min',
+                tz='US/Eastern',
             ),
         )
 
